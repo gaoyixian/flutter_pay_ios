@@ -66,8 +66,8 @@ packages:
     dependency: "direct main"
     description:
       path: "."
-      ref: e79d623ba7d7b1a3c7d75d7cb6e215ac93906a7e
-      resolved-ref: e79d623ba7d7b1a3c7d75d7cb6e215ac93906a7e
+      ref: "4f1b07ab2c1cafbe4a9d6087cba0a560873644f7"
+      resolved-ref: "4f1b07ab2c1cafbe4a9d6087cba0a560873644f7"
       url: "http://git.eatdesk.net/flutter_plugin/flutter_pay_interface.git"
     source: git
     version: "0.0.1"

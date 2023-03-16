@@ -7,11 +7,12 @@ class FlutterPayIos implements FlutterPayInterface {
   static late InAppPurchase _inAppPurchase;
   static late StreamSubscription<List<PurchaseDetails>> _subscription;
   static late Future<bool> Function(String?, String, String) _verifyReceipt;
-
+  static late void Function() _onError;
   @override
   Future<void> init(
-      Future<bool> Function(String?, String, String) verifyReceipt) async {
+      Future<bool> Function(String?, String, String) verifyReceipt, void Function() onError) async {
     _verifyReceipt = verifyReceipt;
+    _onError = onError;
     _inAppPurchase = InAppPurchase.instance;
     final Stream<List<PurchaseDetails>> purchaseUpdated =
         _inAppPurchase.purchaseStream;
@@ -33,8 +34,7 @@ class FlutterPayIos implements FlutterPayInterface {
         print('~~~~~进行中');
       } else {
         if (purchaseDetails.status == PurchaseStatus.error) {
-          // todo
-          // Toast.hide();
+          _onError();
           print('~~~~~${purchaseDetails.error!}');
         } else if (purchaseDetails.status == PurchaseStatus.purchased ||
             purchaseDetails.status == PurchaseStatus.restored) {

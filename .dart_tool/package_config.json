@@ -51,7 +51,7 @@
     },
     {
       "name": "flutter_pay_interface",
-      "rootUri": "file:///Users/fang/.pub-cache/git/flutter_pay_interface-4f1b07ab2c1cafbe4a9d6087cba0a560873644f7/",
+      "rootUri": "file:///Users/fang/.pub-cache/git/flutter_pay_interface-9a211073aa40be20ebd15c8507186df07691ed9c/",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -188,7 +188,7 @@
       "languageVersion": "2.12"
     }
   ],
-  "generated": "2023-03-16T09:49:32.937228Z",
+  "generated": "2023-03-23T10:20:10.086864Z",
   "generator": "pub",
   "generatorVersion": "2.19.4"
 }

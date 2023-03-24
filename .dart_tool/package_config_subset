@@ -2,6 +2,10 @@ events_widget
 2.12
 file:///Users/fang/.pub-cache/git/events_widget-ef7c3b91ad6e1527b7eb95004884b919d4991b89/
 file:///Users/fang/.pub-cache/git/events_widget-ef7c3b91ad6e1527b7eb95004884b919d4991b89/lib/
+flutter_pay_interface
+2.12
+file:///Users/fang/.pub-cache/git/flutter_pay_interface-de90cdce50e90fefb95ba4778e690de5b48004ca/
+file:///Users/fang/.pub-cache/git/flutter_pay_interface-de90cdce50e90fefb95ba4778e690de5b48004ca/lib/
 async
 2.18
 file:///Users/fang/.pub-cache/hosted/pub.flutter-io.cn/async-2.10.0/
@@ -110,10 +114,6 @@ vector_math
 2.14
 file:///Users/fang/.pub-cache/hosted/pub.flutter-io.cn/vector_math-2.1.4/
 file:///Users/fang/.pub-cache/hosted/pub.flutter-io.cn/vector_math-2.1.4/lib/
-flutter_pay_interface
-2.12
-file:///Users/fang/Documents/work/cheban/flutter_plugin/flutter_pay/flutter_pay_interface/
-file:///Users/fang/Documents/work/cheban/flutter_plugin/flutter_pay/flutter_pay_interface/lib/
 flutter_pay_ios
 2.12
 file:///Users/fang/Documents/work/cheban/flutter_plugin/flutter_pay/flutter_pay_ios/

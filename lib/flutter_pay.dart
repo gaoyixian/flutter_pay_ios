@@ -145,4 +145,9 @@ class FlutterPayIos implements FlutterPayInterface {
   int getTyp(bool isAli) {
     return payTypeIos;
   }
+  
+  @override
+  String getPname(bool isAli) {
+    return '';
+  }
 }

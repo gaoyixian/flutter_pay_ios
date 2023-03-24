@@ -41,6 +41,15 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "1.17.0"
+  events_widget:
+    dependency: transitive
+    description:
+      path: "."
+      ref: ef7c3b91ad6e1527b7eb95004884b919d4991b89
+      resolved-ref: ef7c3b91ad6e1527b7eb95004884b919d4991b89
+      url: "http://git.eatdesk.net/flutter_plugin/events_widget.git"
+    source: git
+    version: "0.0.1"
   fake_async:
     dependency: transitive
     description:
@@ -66,11 +75,19 @@ packages:
     dependency: "direct main"
     description:
       path: "."
-      ref: HEAD
-      resolved-ref: "1b6399859d1055041657b36cb298f65e0decddf4"
+      ref: "7d3ceda4207275b9e8040d1485b46888f7aec72c"
+      resolved-ref: "7d3ceda4207275b9e8040d1485b46888f7aec72c"
       url: "http://git.eatdesk.net/flutter_plugin/flutter_pay_interface.git"
     source: git
     version: "0.0.1"
+  flutter_screenutil:
+    dependency: "direct main"
+    description:
+      name: flutter_screenutil
+      sha256: "0a122936b450324cbdfd51be0819cc6fcebb093eb65585e9cd92263f7a1a8a39"
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "5.7.0"
   flutter_test:
     dependency: "direct dev"
     description: flutter

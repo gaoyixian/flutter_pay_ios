@@ -32,6 +32,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "events_widget",
+      "rootUri": "file:///Users/fang/.pub-cache/git/events_widget-ef7c3b91ad6e1527b7eb95004884b919d4991b89/",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "fake_async",
       "rootUri": "file:///Users/fang/.pub-cache/hosted/pub.flutter-io.cn/fake_async-1.3.1",
       "packageUri": "lib/",
@@ -51,7 +57,13 @@
     },
     {
       "name": "flutter_pay_interface",
-      "rootUri": "file:///Users/fang/.pub-cache/git/flutter_pay_interface-1b6399859d1055041657b36cb298f65e0decddf4/",
+      "rootUri": "file:///Users/fang/.pub-cache/git/flutter_pay_interface-7d3ceda4207275b9e8040d1485b46888f7aec72c/",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "flutter_screenutil",
+      "rootUri": "file:///Users/fang/.pub-cache/hosted/pub.flutter-io.cn/flutter_screenutil-5.7.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -188,7 +200,7 @@
       "languageVersion": "2.12"
     }
   ],
-  "generated": "2023-03-24T02:07:54.580004Z",
+  "generated": "2023-03-24T06:05:47.641518Z",
   "generator": "pub",
   "generatorVersion": "2.19.4"
 }

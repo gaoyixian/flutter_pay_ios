@@ -11,12 +11,15 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_screenutil: ^5.5.3+2
   # 苹果内购
   in_app_purchase: ^3.0.7
   # 支付接口
   flutter_pay_interface:
    git:
     url: http://git.eatdesk.net/flutter_plugin/flutter_pay_interface.git
+    ref: 7d3ceda4207275b9e8040d1485b46888f7aec72c
+  #  path: ../flutter_pay_interface
 
 dev_dependencies:
   flutter_test:

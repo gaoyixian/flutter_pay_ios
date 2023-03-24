@@ -1,6 +1,11 @@
+// ignore_for_file: avoid_print
+
 import 'dart:async';
 
+import 'package:flutter/material.dart';
+import 'package:flutter_pay_interface/color.dart';
 import 'package:flutter_pay_interface/flutter_pay_interface.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:in_app_purchase/in_app_purchase.dart';
 
 // /// 支付类型
@@ -10,15 +15,21 @@ const payTypeIos = 3;
 // const payTypeBankcard = 4;
 
 class FlutterPayIos implements FlutterPayInterface {
+  static late LocalizationText localizationText;
+
   static late InAppPurchase _inAppPurchase;
   static late StreamSubscription<List<PurchaseDetails>> _subscription;
   static late VerifyReceipt _verifyReceipt;
   static late void Function() _onError;
+  static late ShowBottomSheet showBottomSheet;
   @override
   Future<void> init(
       {required VerifyReceipt verifyReceipt,
       required LocalizationText localizationText,
+      required ShowBottomSheet showBottomSheet,
       required void Function() onError}) async {
+    FlutterPayIos.localizationText = localizationText;
+    FlutterPayIos.showBottomSheet = showBottomSheet;
     _verifyReceipt = verifyReceipt;
     _onError = onError;
     _inAppPurchase = InAppPurchase.instance;
@@ -88,5 +99,40 @@ class FlutterPayIos implements FlutterPayInterface {
   @override
   Future<void> logout() async {
     _subscription.cancel();
+  }
+
+  @override
+  Widget getAndroidlxbysm() {
+    throw UnimplementedError();
+  }
+
+  @override
+  void paymethodBottom(BuildContext context,
+      {required int id,
+      required int gold,
+      required int rmb,
+      required void Function(int p1, int p2) toPay}) {
+    toPay(id, payTypeIos);
+  }
+
+  @override
+  Widget getPlayButton(BuildContext context, double rate, int chooseIndex,
+      void Function(int index, int typ) toPay) {
+    return GestureDetector(
+      onTap: () {
+        toPay(chooseIndex, payTypeIos);
+      },
+      child: Container(
+        alignment: Alignment.center,
+        width: 180 * rate,
+        color: Colors.transparent,
+        child: FlutterPayIos.localizationText('立即开通支付',
+            style: TextStyle(
+              color: hexColor(0xFFFFFF),
+              fontSize: 14.sp,
+              fontWeight: FontWeight.w400,
+            )),
+      ),
+    );
   }
 }

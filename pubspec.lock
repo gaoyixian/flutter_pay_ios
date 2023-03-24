@@ -74,11 +74,9 @@ packages:
   flutter_pay_interface:
     dependency: "direct main"
     description:
-      path: "."
-      ref: "7d3ceda4207275b9e8040d1485b46888f7aec72c"
-      resolved-ref: "7d3ceda4207275b9e8040d1485b46888f7aec72c"
-      url: "http://git.eatdesk.net/flutter_plugin/flutter_pay_interface.git"
-    source: git
+      path: "../flutter_pay_interface"
+      relative: true
+    source: path
     version: "0.0.1"
   flutter_screenutil:
     dependency: "direct main"

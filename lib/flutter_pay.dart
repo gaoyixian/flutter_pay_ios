@@ -135,4 +135,14 @@ class FlutterPayIos implements FlutterPayInterface {
       ),
     );
   }
+  
+  @override
+  void vipPayBottom(BuildContext context, {required int index, required void Function(bool isShow) onchange}) {
+    // TODO: implement vipPayBottom
+  }
+  
+  @override
+  int getTyp(bool isAli) {
+    return payTypeIos;
+  }
 }

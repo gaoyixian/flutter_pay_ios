@@ -14,7 +14,13 @@ import 'package:in_app_purchase/in_app_purchase.dart';
 const payTypeIos = 3;
 // const payTypeBankcard = 4;
 
-class FlutterPayIos implements FlutterPayInterface {
+class FlutterPayIos extends FlutterPayPlatform  {
+  /// Registers this class as the default instance of [PathProviderPlatform].
+  static void registerWith() {
+    print("@@@@@@@@@@@@@@@ FlutterPayPlatform.instance = FlutterPayIos()");
+    FlutterPayPlatform.instance = FlutterPayIos();
+  }
+
   static late LocalizationText localizationText;
 
   static late InAppPurchase _inAppPurchase;
@@ -22,12 +28,9 @@ class FlutterPayIos implements FlutterPayInterface {
   static late VerifyReceipt _verifyReceipt;
   static late void Function() _onError;
   static late ShowBottomSheet showBottomSheet;
-  @override
-  Future<void> init(
-      {required VerifyReceipt verifyReceipt,
-      required LocalizationText localizationText,
-      required ShowBottomSheet showBottomSheet,
-      required void Function() onError}) async {
+
+    @override
+  Future<void> init({required VerifyReceipt verifyReceipt, required LocalizationText localizationText, required void Function() onError, required ShowBottomSheet showBottomSheet, required IWithDrawalMgr withDrawalMgr}) async {
     FlutterPayIos.localizationText = localizationText;
     FlutterPayIos.showBottomSheet = showBottomSheet;
     _verifyReceipt = verifyReceipt;
@@ -44,7 +47,7 @@ class FlutterPayIos implements FlutterPayInterface {
       // handle error here.
     });
   }
-
+  
   void _listenToPurchaseUpdated(
       List<PurchaseDetails> purchaseDetailsList) async {
     for (PurchaseDetails purchaseDetails in purchaseDetailsList) {
@@ -102,8 +105,8 @@ class FlutterPayIos implements FlutterPayInterface {
   }
 
   @override
-  Widget getAndroidlxbysm() {
-    throw UnimplementedError();
+  Widget getLxbysm() {
+    return Container();
   }
 
   @override

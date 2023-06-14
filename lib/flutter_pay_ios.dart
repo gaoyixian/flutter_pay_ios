@@ -86,7 +86,7 @@ class FlutterPayIos extends FlutterPayPlatform {
 
   String _orderNumber = '';
   @override
-  Future<void> pay(dynamic rsp, int time) async {
+  Future<dynamic> pay(dynamic rsp, int time) async {
     _orderNumber = getObjectKeyValueByPath(rsp, 'data.order_number');
     String productId = getObjectKeyValueByPath(rsp, 'data.ios_product_id');
     Set<String> set = {};

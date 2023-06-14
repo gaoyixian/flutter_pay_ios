@@ -35,7 +35,9 @@ class FlutterPayIos extends FlutterPayPlatform {
       required LocalizationText localizationText,
       required void Function() onError,
       required ShowBottomSheet showBottomSheet,
-      required IWithDrawalMgr withDrawalMgr}) async {
+      required IWithDrawalMgr withDrawalMgr,
+      String? payConfig, //pay插件配置
+  }) async {
     FlutterPayIos.localizationText = localizationText;
     FlutterPayIos.showBottomSheet = showBottomSheet;
     _verifyReceipt = verifyReceipt;
@@ -161,6 +163,11 @@ class FlutterPayIos extends FlutterPayPlatform {
 
   @override
   String getPname(bool isAli) {
+    return '';
+  }
+
+  @override
+  String getPnameByType(int type) {
     return '';
   }
 }

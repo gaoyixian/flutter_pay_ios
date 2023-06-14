@@ -14,7 +14,7 @@ import 'package:in_app_purchase/in_app_purchase.dart';
 const payTypeIos = 3;
 // const payTypeBankcard = 4;
 
-class FlutterPayIos extends FlutterPayPlatform  {
+class FlutterPayIos extends FlutterPayPlatform {
   /// Registers this class as the default instance of [PathProviderPlatform].
   static void registerWith() {
     print("@@@@@@@@@@@@@@@ FlutterPayPlatform.instance = FlutterPayIos()");
@@ -29,8 +29,13 @@ class FlutterPayIos extends FlutterPayPlatform  {
   static late void Function() _onError;
   static late ShowBottomSheet showBottomSheet;
 
-    @override
-  Future<void> init({required VerifyReceipt verifyReceipt, required LocalizationText localizationText, required void Function() onError, required ShowBottomSheet showBottomSheet, required IWithDrawalMgr withDrawalMgr}) async {
+  @override
+  Future<void> init(
+      {required VerifyReceipt verifyReceipt,
+      required LocalizationText localizationText,
+      required void Function() onError,
+      required ShowBottomSheet showBottomSheet,
+      required IWithDrawalMgr withDrawalMgr}) async {
     FlutterPayIos.localizationText = localizationText;
     FlutterPayIos.showBottomSheet = showBottomSheet;
     _verifyReceipt = verifyReceipt;
@@ -47,7 +52,7 @@ class FlutterPayIos extends FlutterPayPlatform  {
       // handle error here.
     });
   }
-  
+
   void _listenToPurchaseUpdated(
       List<PurchaseDetails> purchaseDetailsList) async {
     for (PurchaseDetails purchaseDetails in purchaseDetailsList) {
@@ -110,11 +115,15 @@ class FlutterPayIos extends FlutterPayPlatform  {
   }
 
   @override
-  void paymethodBottom(BuildContext context,
-      {required int id,
-      required int gold,
-      required int rmb,
-      required void Function(int p1, int p2) toPay}) {
+  void paymethodBottom(
+    BuildContext context, {
+    required int id,
+    required int gold,
+    required double price,
+    String? currencyCode,
+    required void Function(int p1, int p2) toPay,
+  }) {
+    currencyCode ??= CurrencyCode.CNY;
     toPay(id, payTypeIos);
   }
 
@@ -138,17 +147,18 @@ class FlutterPayIos extends FlutterPayPlatform  {
       ),
     );
   }
-  
+
   @override
-  void vipPayBottom(BuildContext context, {required int index, required void Function(bool isShow) onchange}) {
+  void vipPayBottom(BuildContext context,
+      {required int index, required void Function(bool isShow) onchange}) {
     // TODO: implement vipPayBottom
   }
-  
+
   @override
   int getTyp(bool isAli) {
     return payTypeIos;
   }
-  
+
   @override
   String getPname(bool isAli) {
     return '';

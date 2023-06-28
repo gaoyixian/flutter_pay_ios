@@ -68,9 +68,11 @@ class FlutterPayIos extends FlutterPayPlatform {
         } else if (purchaseDetails.status == PurchaseStatus.purchased ||
             purchaseDetails.status == PurchaseStatus.restored) {
           _verifyReceipt(
-              purchaseDetails.purchaseID,
-              purchaseDetails.verificationData.serverVerificationData,
-              _orderNumber);
+            purchaseDetails.purchaseID,
+            purchaseDetails.verificationData.serverVerificationData,
+            _orderNumber,
+            purchaseDetails.productID,
+          );
         }
         if (purchaseDetails.pendingCompletePurchase) {
           await _inAppPurchase.completePurchase(purchaseDetails);

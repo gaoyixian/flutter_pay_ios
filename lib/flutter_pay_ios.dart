@@ -165,11 +165,11 @@ class FlutterPayIos extends FlutterPayPlatform {
 
   @override
   String getPname(bool isAli) {
-    return '';
+    return 'ios';
   }
 
   @override
   String getPnameByType(int type) {
-    return '';
+    return 'ios';
   }
 }

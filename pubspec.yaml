@@ -17,7 +17,8 @@ dependencies:
   # 支付接口
   flutter_pay_interface:
    git:
-    url: http://git.eatdesk.net/flutter_plugin/flutter_pay_interface.git
+    # url: http://git.eatdesk.net/flutter_plugin/flutter_pay_interface.git
+    url: https://github.com/gaoyixian/flutter_pay_interface.git
     ref: 1e277be85346ee21040a3f873a221ac7884796d6
   #  path: ../flutter_pay_interface
 
